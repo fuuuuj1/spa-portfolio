@@ -103,12 +103,12 @@ export default {
                 link:'/about#profile',
               },
               {
-                name:'Work history',
-                link:'/about#history',
+                name:'favorites',
+                link:'/about#favorites',
               },
               {
-                name:'hobby',
-                link:'/about#hobby',
+                name:'Work history',
+                link:'/about#history',
               },
               {
                 name:'next step',

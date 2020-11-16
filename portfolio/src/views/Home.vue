@@ -6,6 +6,7 @@
     :show-arrows="false"
     :hide-delimiter-background="true"
     :height="450"
+    :class="`rounded-b-xl`"
     >
       <v-carousel-item
         v-for="(item,i) in items"
@@ -16,9 +17,9 @@
     </div>
 
     <div class="declaration">
-      <h2>現在  WEBエンジニアになるため転職活動中！</h2>
+      <h1>WEBエンジニアになるため転職活動中！</h1>
       <p>関西でバックエンドエンジニア志望</p>
-      <p>希望年収350万</p>
+      <p>独学でPHP,Laravel,Vue,Dockerを学習しました Gitを使用しての共同開発経験あり</p>
     </div>
 
   </div>
@@ -54,8 +55,18 @@ export default {
   height: 60%;
   border-radius: 0% 0% 50% 50% / 0% 0% 50% 50% !important;
 }
-.v-craousel {
+.v-carousel {
   border-radius: 0% 0% 50% 50% / 0% 0% 20% 20% !important;
+}
+.declaration {
+  margin: 60px auto 30px;
+}
+.declaration h1 {
+  color: red;
+  margin: 30px auto;
+}
+.declaration p {
+  font-weight: bold;
 }
 
 </style>
