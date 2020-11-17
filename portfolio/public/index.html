@@ -15,5 +15,24 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!-- SVGをinlineSVGに変換する -->
+    <script src="//cdn.jsdelivr.net/npm/desvg@1.0.2/desvg.min.js"></script>
+
+    <script>
+      window.addEventListener('load', function () {
+        deSVG('.useful', true);
+      });
+    </script>
+    <script>
+      window.addEventListener('load', function () {
+        deSVG('.learn', true);
+      });
+    </script>
+    <script>
+      window.addEventListener('load', function () {
+        deSVG('.cooperate', true);
+      });
+    </script>
   </body>
 </html>

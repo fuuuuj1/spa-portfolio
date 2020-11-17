@@ -73,6 +73,7 @@
     <!-- ナビバー終了 -->
 
     </header>
+
     <v-main>
       <router-view/>
     </v-main>
@@ -84,7 +85,6 @@
 
 export default {
   name: 'app',
-
   data(){
     return{
         drawer: false,
@@ -103,12 +103,16 @@ export default {
                 link:'/about#profile',
               },
               {
-                name:'favorites',
+                name:'Favorites',
                 link:'/about#favorites',
               },
               {
                 name:'Work history',
                 link:'/about#history',
+              },
+              {
+                name:'Belief',
+                link:'/about#belief',
               },
               {
                 name:'next step',
