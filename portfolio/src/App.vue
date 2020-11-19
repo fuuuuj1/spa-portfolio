@@ -66,13 +66,13 @@
         <v-btn text to="/">Home</v-btn>
         <v-btn text to="/about">About</v-btn>
         <v-btn text to="/works">Works</v-btn>
-        <v-btn text to="/skill">Skill</v-btn>
         <v-btn text to="/contact">Contact</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <!-- ナビバー終了 -->
 
     </header>
+
     <v-main>
       <router-view/>
     </v-main>
@@ -84,7 +84,6 @@
 
 export default {
   name: 'app',
-
   data(){
     return{
         drawer: false,
@@ -103,12 +102,16 @@ export default {
                 link:'/about#profile',
               },
               {
-                name:'favorites',
+                name:'Favorites',
                 link:'/about#favorites',
               },
               {
                 name:'Work history',
                 link:'/about#history',
+              },
+              {
+                name:'Belief',
+                link:'/about#belief',
               },
               {
                 name:'next step',
@@ -134,24 +137,6 @@ export default {
                 link:'/works#article'
               }
             ],
-          },
-          {
-            name: 'Skill',
-            icon: 'mdi-poll',
-            lists:[
-              {
-                name:'programming',
-                link:'/skill#programming'
-              },
-              {
-                name:'medical',
-                link:'/skill#medical'
-              },
-              {
-                name:'licence',
-                link:'/skill#licence'
-              }
-              ],
           },
           {
             name: 'Contact',
