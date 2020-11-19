@@ -7,6 +7,7 @@
     :hide-delimiter-background="true"
     :height="450"
     :class="`rounded-b-xl`"
+    class="home-carousel"
     >
       <v-carousel-item
         v-for="(item,i) in items"
@@ -55,7 +56,7 @@ export default {
   height: 60%;
   border-radius: 0% 0% 50% 50% / 0% 0% 50% 50% !important;
 }
-.v-carousel {
+.home-carousel {
   border-radius: 0% 0% 50% 50% / 0% 0% 20% 20% !important;
 }
 .declaration {
