@@ -66,7 +66,6 @@
         <v-btn text to="/">Home</v-btn>
         <v-btn text to="/about">About</v-btn>
         <v-btn text to="/works">Works</v-btn>
-        <v-btn text to="/skill">Skill</v-btn>
         <v-btn text to="/contact">Contact</v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -138,24 +137,6 @@ export default {
                 link:'/works#article'
               }
             ],
-          },
-          {
-            name: 'Skill',
-            icon: 'mdi-poll',
-            lists:[
-              {
-                name:'programming',
-                link:'/skill#programming'
-              },
-              {
-                name:'medical',
-                link:'/skill#medical'
-              },
-              {
-                name:'licence',
-                link:'/skill#licence'
-              }
-              ],
           },
           {
             name: 'Contact',

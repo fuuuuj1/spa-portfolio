@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import about from '@/components/about.vue'
 import works from '@/components/works.vue'
-import skill from '@/components/skill.vue'
 import contact from '@/components/contact.vue'
 
 Vue.use(VueRouter)
@@ -31,11 +30,6 @@ const routes = [
     path: '/works',
     name: 'works',
     component: works
-  },
-  {
-    path: '/skill',
-    name: 'skill',
-    component: skill
   },
   {
     path: '/contact',
