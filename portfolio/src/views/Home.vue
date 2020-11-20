@@ -1,26 +1,22 @@
 <template>
   <div class="home">
 
-    <div class="carousel-view">
-    <v-carousel
-    :show-arrows="false"
-    :hide-delimiter-background="true"
-    :height="450"
-    :class="`rounded-b-xl`"
-    class="home-carousel"
-    >
-      <v-carousel-item
-        v-for="(item,i) in items"
-        :key="i"
-        :src="item.src">
-      </v-carousel-item>
-    </v-carousel>
+    <div class="top-visual">
+      <v-img
+      v-bind:src="home_src"
+      max-height="550"></v-img>
     </div>
 
     <div class="declaration">
-      <h1>WEBエンジニアになるため転職活動中！</h1>
-      <p>関西でバックエンドエンジニア志望</p>
-      <p>独学でPHP,Laravel,Vue,Dockerを学習しました Gitを使用しての共同開発経験あり</p>
+      <h1>
+        <span>エンジニアを</span>
+        <span>目指し転職活動中</span>
+        <span class="hope">関西でバックエンド志望</span>
+      </h1>
+    </div>
+
+    <div class="sub-text">
+      <p>私について詳しくはこちらから</p>
     </div>
 
   </div>
@@ -28,46 +24,55 @@
 
 <script>
 export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
+  data() {
+    return {
+      home_src: require("@/assets/imags/seto.jpg")
+    }
   }
-
+}
 </script>
 
 <style>
-.home .carousel-view {
-  width: 100%;
-  height: 60%;
-  border-radius: 0% 0% 50% 50% / 0% 0% 50% 50% !important;
+.home {
+  position: relative;
+  height: 90vh;
 }
-.home-carousel {
-  border-radius: 0% 0% 50% 50% / 0% 0% 20% 20% !important;
-}
-.declaration {
-  margin: 60px auto 30px;
-}
-.declaration h1 {
-  color: red;
-  margin: 30px auto;
-}
-.declaration p {
-  font-weight: bold;
+.home .top-visual {
+  width: 70%;
+  height: 70vh;
+  position: absolute;
+    top: 10%;
+    left: 0;
 }
 
+.declaration {
+  position: absolute;
+  right: 7%;
+  top: 150px;
+  text-align: right;
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: black;
+}
+.declaration h1 {
+  font-size: 74px;
+    font-family: "Verlag A","Verlag B";
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+.declaration h1 span{
+  display: block;
+    padding: 0 0 4px 0;
+    margin: 28px 0 0 0;
+    font-size: 74px;
+    letter-spacing: 0.06em;
+}
+.declaration h1 .hope {
+  background: rgba(224, 224, 224, 0.6);
+}
+.sub-text {
+  position: absolute;
+  right: 7%;
+  bottom: 12%;
+}
 </style>
