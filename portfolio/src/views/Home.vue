@@ -19,16 +19,24 @@
       <p>私について詳しくはこちらから</p>
     </div>
 
+    <next-button :next-url="nextUrl" />
+
   </div>
 </template>
 
 <script>
+import NextButton from '../components/NextButton.vue'
+
 export default {
   data() {
     return {
-      home_src: require("@/assets/imags/seto.jpg")
+      home_src: require("@/assets/imags/seto.jpg"),
+      nextUrl: '/about'
     }
-  }
+  },
+  components: {
+    NextButton
+  },
 }
 </script>
 
