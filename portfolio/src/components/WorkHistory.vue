@@ -67,8 +67,9 @@ export default {
 
 <style>
 #history {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
+  position: relative;
 }
 #history h1 {
   text-align: left;

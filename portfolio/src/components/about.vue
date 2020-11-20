@@ -128,6 +128,7 @@ export default {
   height: 100vh;
   width: 100%;
   margin-top: 3vh;
+  position: relative;
 }
 #profile h1 {
   text-align: left;

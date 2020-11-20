@@ -47,6 +47,7 @@
 #contact {
   width: 100%;
   height: 90vh;
+  position: relative;
 }
 #contact h1 {
   text-align: left;

@@ -87,6 +87,7 @@
   height: 100vh;
   width: 100%;
   margin-top: 15vh;
+  position: relative;
 }
 #belief h1 {
   text-align: left;
