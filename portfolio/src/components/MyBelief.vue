@@ -75,11 +75,28 @@
   </v-row>
 
   </v-container>
+  <back-button :back-url="backUrl" />
+  <next-button :next-url="nextUrl" />
 </div>
 </template>
 
 
 <script>
+import NextButton from '../components/NextButton.vue'
+import BackButton from '../components/BackButton.vue'
+
+export default {
+  data() {
+    return {
+      nextUrl: '/works',
+      backUrl: '/'
+    }
+  },
+  components: {
+    NextButton,
+    BackButton
+  },
+}
 </script>
 
 <style>

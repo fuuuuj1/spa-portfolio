@@ -29,6 +29,8 @@
 
       </v-row>
       </v-container>
+      <back-button :back-url="backUrl" />
+      <next-button :next-url="nextUrl" />
     </div>
 
 
@@ -106,6 +108,8 @@
 </template>
 
 <script>
+import NextButton from '../components/NextButton.vue'
+import BackButton from '../components/BackButton.vue'
 import ImageView from './ImageView.vue'
 import MyBelief from './MyBelief.vue'
 export default {
@@ -114,20 +118,23 @@ export default {
       profile_src: require("@/assets/imags/IMG_0711.jpeg"),
       ujitoku_src: require("@/assets/imags/ujitoku.jpg"),
       kousei_src: require("@/assets/imags/kousei.jpg"),
+      nextUrl: '/works',
+      backUrl: '/'
     }
   },
   components: {
     MyBelief,
     ImageView,
+    NextButton,
+    BackButton
   }
 }
 </script>
 
 <style scope>
 #profile {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  margin-top: 3vh;
   position: relative;
 }
 #profile h1 {
@@ -165,7 +172,7 @@ export default {
   box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
 }
 #history {
-  height: 95vh;
+  height: 90vh;
   width: 100%;
 }
 #history h1 {

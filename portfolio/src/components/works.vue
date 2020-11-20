@@ -38,11 +38,16 @@
       </v-col>
     </v-row>
   </v-container>
+  <back-button :back-url="backUrl" />
+  <next-button :next-url="nextUrl" />
 
 </div>
 </template>
 
 <script>
+import NextButton from '../components/NextButton.vue'
+import BackButton from '../components/BackButton.vue'
+
 export default {
     data () {
       return {
@@ -60,7 +65,13 @@ export default {
             src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
           },
         ],
+        nextUrl: '/contact',
+        backUrl: '/about'
       }
+    },
+    components: {
+      NextButton,
+      BackButton
     },
 }
 </script>

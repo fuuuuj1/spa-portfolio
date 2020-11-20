@@ -36,11 +36,24 @@
     </v-row>
 
   </v-container>
+  <back-button :back-url="backUrl" />
 
 </div>
 </template>
 
 <script>
+import BackButton from '../components/BackButton.vue'
+
+export default {
+  data() {
+    return {
+      backUrl: '/works'
+    }
+  },
+  components: {
+    BackButton
+  },
+}
 </script>
 
 <style scope>
