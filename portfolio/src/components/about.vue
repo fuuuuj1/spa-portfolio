@@ -2,6 +2,8 @@
   <div class="about-me">
 
     <div id="profile">
+
+
       <v-container>
       <h1 class="heading">Profile</h1>
 

@@ -14,8 +14,7 @@
         <div class="contact-bg">
           <v-img
           v-bind:src="contact_img"
-          max-height="380"></v-img>
-          <!-- <img v-bind:src="contact_img" alt="ダンボー"> -->
+          max-height="400"></v-img>
         </div>
 
       </div>
@@ -36,7 +35,7 @@
 
         <v-col cols="8">
           <div class="contact-text">
-            <span>もし、私に興味を持っていただけましたらDMからの連絡お待ちしております</span>
+            <span>私に興味を持っていただけましたらDMからの連絡お待ちしております</span>
             <span><a href="https://www.wantedly.com/users/138685639" class="wantedly">Wantedly</a>もよろしければ見ていってください</span>
           </div>
         </v-col>
@@ -103,6 +102,26 @@ export default {
   width: 65%;
   height: 100%;
   z-index: 1;
+}
+.contact-bg::before,
+.contact-bg::after {
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+  content: '';
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 10px 15px rgba(0,0,0,.5);
+}
+.contact-bg::before {
+  left: 10px;
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.contact-bg::after {
+  right: 10px;
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .contact-title {
   position: absolute;

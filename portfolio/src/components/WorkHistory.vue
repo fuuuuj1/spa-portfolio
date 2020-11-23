@@ -1,7 +1,7 @@
 <template>
   <div id="history">
 
-      <v-container :fulid="true">
+      <v-container>
       <h1>Work history</h1>
 
         <v-row>
@@ -28,28 +28,6 @@
 
         </v-row>
 
-      <v-row>
-
-        <v-col cols="5">
-        <div class="second-work-image">
-          <v-img
-            v-bind:src="kousei_src">
-          </v-img>
-        </div>
-        </v-col>
-
-        <v-col cols="7">
-          <div class="second-work-title">
-            <h3>(2020 - 現在) 興生総合病院</h3>
-          </div>
-          <div class="second-work-text">
-            <p>家庭の事情により一時広島に戻ることに</p>
-            <p></p>
-          </div>
-        </v-col>
-
-      </v-row>
-
       </v-container>
 
       <back-button :back-url="backUrl" />
@@ -66,8 +44,7 @@ export default {
   data() {
     return {
       ujitoku_src: require("@/assets/img/ujitoku.jpg"),
-      kousei_src: require("@/assets/img/kousei.jpg"),
-      nextUrl: '/about/belief',
+      nextUrl: '/about/history2',
       backUrl: '/about'
     }
   },
@@ -93,9 +70,7 @@ export default {
   font-family: "futura_m";
   margin-right: 3.2rem;
   padding-top: 1rem;
-}
-.row {
-  margin-top:5vh;
+  margin-bottom: 8vh;
 }
 .first-work-title {
   text-align: left;
@@ -104,21 +79,19 @@ export default {
   font-weight: bold;
   margin-bottom: 1.3rem;
 }
+.first-work-title h3 {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
 .first-work-text {
   text-align: left;
   letter-spacing: 0.08rem;
   line-height: 1.9;
 }
-.second-work-title {
-  text-align: left;
-  font-size: 1.3rem;
-  letter-spacing: 0.15em;
-  font-weight: bold;
-  margin-bottom: 1.3rem;
-}
-.second-work-text {
-  text-align: left;
-  letter-spacing: 0.08rem;
-  line-height: 1.9;
+.first-work-image {
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
 </style>

@@ -89,7 +89,7 @@ export default {
   data() {
     return {
       nextUrl: '/works',
-      backUrl: '/about/history'
+      backUrl: '/about/history2'
     }
   },
   components: {

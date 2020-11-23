@@ -10,7 +10,6 @@
             :show-arrows="false"
             :hide-delimiter-background="true"
             :height="350"
-            :class="`rounded-b-xl`"
             class="work1-carousel"
             >
               <v-carousel-item

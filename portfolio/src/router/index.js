@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import about from '@/components/about.vue'
 import WorkHistory from '@/components/WorkHistory.vue'
+import WorkHistory2 from '@/components/WorkHistory2.vue'
 import MyBelief from '@/components/MyBelief.vue'
 import WorksOne from '@/components/WorksOne.vue'
 import WorksTwo from '@/components/WorksTwo.vue'
@@ -34,6 +35,11 @@ const routes = [
     path: '/about/history',
     name: 'WorkHistory',
     component: WorkHistory
+  },
+  {
+    path: '/about/history2',
+    name: 'WorkHistory',
+    component: WorkHistory2
   },
   {
     path: '/about/belief',
