@@ -170,8 +170,6 @@ export default {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    overflow-x: hidden;
 }
 #works h1 {
   text-align: left;

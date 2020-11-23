@@ -67,6 +67,7 @@ export default {
   width: 100%;
   height: 90vh;
   position: relative;
+  font-family: 'futura_r','Helvetica Neue','Helvetica','Arial','Avenir','Hiragino Sans',游ゴシック体, 'Yu Gothic', YuGothic,'ヒラギノ角ゴシック','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;
 }
 #contact h1 {
   text-align: left;
@@ -133,6 +134,7 @@ export default {
 }
 .contact-link {
   margin-top: 8vh;
+  text-align: center;
 }
 .contact-text {
   justify-content: center;
@@ -152,8 +154,5 @@ export default {
   font-size: 1.4rem;
   text-decoration: none;
   color: skyblue;
-}
-.twitter {
-  text-decoration: none;
 }
 </style>

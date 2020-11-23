@@ -5,7 +5,7 @@
 
 
     <!-- サブメニュー -->
-    <v-navigation-drawer app   v-model="drawer" clipped>
+    <v-navigation-drawer app v-model="drawer" clipped>
       <v-container>
 
         <v-list-item>
@@ -18,10 +18,7 @@
         <v-divider></v-divider>
 
 
-
-        <v-list dense nav>
-
-          <v-list-group
+          <!-- <v-list-group
           v-for="page_list in page_lists"
           :key="page_list.name"
           :prepend-icon="page_list.icon"
@@ -40,7 +37,64 @@
               </v-list-item-content>
             </v-list-item>
 
-          </v-list-group>
+          </v-list-group> -->
+
+
+        <v-list dense nav>
+
+          <template v-for="page_list in page_lists">
+
+              <v-list-item
+                  v-if="!page_list.lists"
+                  :to="page_list.link"
+                  :key="page_list.name"
+                  :append-icon="page_list.lists ? undefined : '  ' "
+                  @click="menu_close"
+                  >
+
+
+                  <v-list-item-icon>
+                    <v-icon>{{ page_list.icon }}</v-icon>
+                  </v-list-item-icon>
+
+                  <v-list-item-content>
+
+                    <v-list-item-title>
+                      {{ page_list.name }}
+                    </v-list-item-title>
+
+                  </v-list-item-content>
+              </v-list-item>
+
+              <v-list-group
+                  v-else
+                  no-action
+                  :prepend-icon="page_list.icon"
+                  :key="page_list.name"
+                  v-model="page_list.active">
+
+                  <template v-slot:activator>
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ page_list.name }}
+                        </v-list-item-title>
+                      </v-list-item-content>
+                  </template>
+
+                  <v-list-item
+                      v-for="list in page_list.lists"
+                      :key="list.name"
+                      :to="list.link">
+
+                  <v-list-item-title>
+                    {{ list.name }}
+                  </v-list-item-title>
+
+                  </v-list-item>
+
+              </v-list-group>
+
+          </template>
 
         </v-list>
 
@@ -53,8 +107,7 @@
       app
       clipped-left
       absolute
-      dark
-      >
+      dark>
       <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>my-portfolio</v-toolbar-title>
@@ -83,9 +136,15 @@
 
 export default {
   name: 'app',
+  methods:{
+          menu_close(){
+            this.page_lists.forEach( page_list => page_list.active = false)
+          }
+        },
   data(){
     return{
         drawer: false,
+
         page_lists:[
           {
             name: 'Home',
@@ -95,46 +154,58 @@ export default {
           {
             name: 'About',
             icon: 'mdi-account',
+            active: false,
+            link: '',
             lists:[
               {
                 name:'Profile',
-                link:'/about#profile',
+                link:'/about',
               },
-              {
-                name:'Favorites',
-                link:'/about#favorites',
-              },
+              // {
+              //   name:'Favorites',
+              //   link:'/about/favorites',
+              // },
               {
                 name:'Work history',
-                link:'/about#history',
+                link:'/history',
+              },
+              {
+                name:'Work history2',
+                link:'/history2',
               },
               {
                 name:'Belief',
-                link:'/about#belief',
+                link:'/belief',
               },
-              {
-                name:'next step',
-                link:'/about#next',
-              }
+              // {
+              //   name:'next step',
+              //   link:'/about#next',
+              // }
             ],
           },
           {
             name: 'Works',
             icon: 'mdi-image-outline',
+            active: false,
+            link: '',
             lists:
             [
               {
                 name:'portfolio',
-                link:'/works#portfolio'
+                link:'/works'
               },
               {
-                name:'photo',
-                link:'/works#photo'
+                name:'portfolio2',
+                link:'/works2'
               },
               {
-                name:'article',
-                link:'/works#article'
-              }
+                name:'portfolio3',
+                link:'/works3'
+              },
+              // {
+              //   name:'article',
+              //   link:'/works#article'
+              // }
             ],
           },
           {
@@ -153,16 +224,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
+a {
     font-weight: bold;
     color: #2c3e50;
   }
-}
 </style>

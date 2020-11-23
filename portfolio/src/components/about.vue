@@ -68,6 +68,7 @@ export default {
   height: 90vh;
   width: 100%;
   position: relative;
+  font-family: 'futura_r','Helvetica Neue','Helvetica','Arial','Avenir','Hiragino Sans',游ゴシック体, 'Yu Gothic', YuGothic,'ヒラギノ角ゴシック','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;
 }
 #profile h1 {
   text-align: left;

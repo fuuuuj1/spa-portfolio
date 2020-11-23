@@ -1,7 +1,7 @@
 <template>
 <div id="works">
   <v-container class="works-container">
-    <h1>Radiation Docimeter</h1>
+    <h1>PHPで作成した体重管理サイトの紹介</h1>
 
     <v-row class="works-row">
       <v-col cols="5" class="works-image">
@@ -170,8 +170,6 @@ export default {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    overflow-x: hidden;
 }
 #works h1 {
   text-align: left;
