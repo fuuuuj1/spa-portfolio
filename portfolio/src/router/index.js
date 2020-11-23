@@ -2,7 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import about from '@/components/about.vue'
-import works from '@/components/works.vue'
+import WorkHistory from '@/components/WorkHistory.vue'
+import WorkHistory2 from '@/components/WorkHistory2.vue'
+import MyBelief from '@/components/MyBelief.vue'
+import WorksOne from '@/components/WorksOne.vue'
+import WorksTwo from '@/components/WorksTwo.vue'
+import WorksThree from '@/components/WorksThree.vue'
 import contact from '@/components/contact.vue'
 
 Vue.use(VueRouter)
@@ -27,9 +32,34 @@ const routes = [
     component: about
   },
   {
+    path: '/about/history',
+    name: 'WorkHistory',
+    component: WorkHistory
+  },
+  {
+    path: '/about/history2',
+    name: 'WorkHistory',
+    component: WorkHistory2
+  },
+  {
+    path: '/about/belief',
+    name: 'MyBelief',
+    component: MyBelief
+  },
+  {
     path: '/works',
-    name: 'works',
-    component: works
+    name: 'WorksOne',
+    component: WorksOne
+  },
+  {
+    path: '/works/2',
+    name: 'WorksTwo',
+    component: WorksTwo
+  },
+  {
+    path: '/works/3',
+    name: 'WorksThree',
+    component: WorksThree
   },
   {
     path: '/contact',

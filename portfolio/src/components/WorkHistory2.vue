@@ -4,29 +4,29 @@
       <v-container>
       <h1>Work history</h1>
 
-        <v-row>
+      <v-row>
 
-            <v-col cols="7">
-              <div class="first-work-title">
-                <h3>(2014 - 2019) 宇治徳洲会病院</h3>
-              </div>
+        <v-col cols="7">
+          <div class="second-work-title">
+            <h3>(2020 - 現在) 興生総合病院</h3>
+          </div>
+          <div class="second-work-text">
+            <p>家庭の事情により一時広島に戻ることに</p>
+            <p></p>
+          </div>
+        </v-col>
 
-              <div class="first-work-text">
-                <p>救急の現場で活躍できる人材になりたい思いがあり入職</p>
-                <p>日々の業務に邁進するだけでなく、チームのために行動してきた結果、主任レベルの方々が参加するマネジメント研修会のメンバーとなり、チーム運営の技術、モチベーション向上などの方法を学習、実践する</p>
-                <p>災害対応の研修や防災訓練などに主体的に参加することで、1000名以上いる職員の中からDMATメンバーに選出される</p>
-              </div>
-            </v-col>
+        <v-col cols="5">
+        <div class="second-work-image">
+          <v-img
+            v-bind:src="kousei_src">
+          </v-img>
+        </div>
+        </v-col>
 
-          <v-col cols="5">
-            <div class="first-work-image">
-              <v-img
-                v-bind:src="ujitoku_src">
-              </v-img>
-            </div>
-          </v-col>
 
-        </v-row>
+
+      </v-row>
 
       </v-container>
 
@@ -43,9 +43,9 @@ import BackButton from '../components/BackButton.vue'
 export default {
   data() {
     return {
-      ujitoku_src: require("@/assets/img/ujitoku.jpg"),
-      nextUrl: '/about/history2',
-      backUrl: '/about'
+      kousei_src: require("@/assets/img/kousei.jpg"),
+      nextUrl: '/about/belief',
+      backUrl: '/about/history'
     }
   },
   components: {
@@ -73,26 +73,27 @@ export default {
   padding-top: 1rem;
   margin-bottom: 8vh;
 }
-.first-work-title {
+
+.second-work-title {
   text-align: left;
   font-size: 1.3rem;
   letter-spacing: 0.15em;
   font-weight: bold;
   margin-bottom: 1.3rem;
 }
-.first-work-title h3 {
+.second-work-title h3 {
   font-size: 2rem;
   letter-spacing: 0.2em;
   font-weight: bold;
   margin-bottom: 0.4rem;
   text-align: left;
 }
-.first-work-text {
+.second-work-text {
   text-align: left;
   letter-spacing: 0.08rem;
   line-height: 1.9;
 }
-.first-work-image {
+.second-work-image {
   box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
 </style>

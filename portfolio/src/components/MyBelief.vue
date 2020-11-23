@@ -75,19 +75,36 @@
   </v-row>
 
   </v-container>
+  <back-button :back-url="backUrl" />
+  <next-button :next-url="nextUrl" />
 </div>
 </template>
 
 
 <script>
+import NextButton from '../components/NextButton.vue'
+import BackButton from '../components/BackButton.vue'
+
+export default {
+  data() {
+    return {
+      nextUrl: '/works',
+      backUrl: '/about/history2'
+    }
+  },
+  components: {
+    NextButton,
+    BackButton
+  },
+}
 </script>
 
 <style>
 #belief {
-  height: 100vh;
+  height:  90vh;
   width: 100%;
-  margin-top: 15vh;
   position: relative;
+  font-family: 'futura_r','Helvetica Neue','Helvetica','Arial','Avenir','Hiragino Sans',游ゴシック体, 'Yu Gothic', YuGothic,'ヒラギノ角ゴシック','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;
 }
 #belief h1 {
   text-align: left;

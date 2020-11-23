@@ -11,7 +11,11 @@
         <h1 class="header">Contact</h1>
         </div>
 
-        <div class="contact-bg"></div>
+        <div class="contact-bg">
+          <v-img
+          v-bind:src="contact_img"
+          max-height="400"></v-img>
+        </div>
 
       </div>
 
@@ -19,28 +23,43 @@
 
     <v-row class="contact-link">
         <v-col cols="4">
-          <a href="" class="twitter">
+          <v-btn
+          icon
+          href="https://twitter.com/">
           <v-icon
           size="80"
-          color="#40C4FF"
+          color="twitter"
           >mdi-twitter</v-icon>
-          </a>
+          </v-btn>
         </v-col>
 
         <v-col cols="8">
           <div class="contact-text">
-            <span>もし、私に興味を持っていただけましたらDMからの連絡お待ちしております</span>
-            <span><a href="" class="wantedly">Wantedly</a>もよろしければ見ていってください</span>
+            <span>私に興味を持っていただけましたらDMからの連絡お待ちしております</span>
+            <span><a href="https://www.wantedly.com/users/138685639" class="wantedly">Wantedly</a>もよろしければ見ていってください</span>
           </div>
         </v-col>
     </v-row>
 
   </v-container>
-
+  <back-button :back-url="backUrl" />
 </div>
 </template>
 
 <script>
+import BackButton from '../components/BackButton.vue'
+
+export default {
+  data() {
+    return {
+      contact_img: require("@/assets/img/dambo.jpg"),
+      backUrl: '/works/3'
+    }
+  },
+  components: {
+    BackButton
+  },
+}
 </script>
 
 <style scope>
@@ -48,6 +67,7 @@
   width: 100%;
   height: 90vh;
   position: relative;
+  font-family: 'futura_r','Helvetica Neue','Helvetica','Arial','Avenir','Hiragino Sans',游ゴシック体, 'Yu Gothic', YuGothic,'ヒラギノ角ゴシック','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif;
 }
 #contact h1 {
   text-align: left;
@@ -66,6 +86,8 @@
     0px  2px 4px #072142,
     -2px  0px 4px #072142,
     0px  -2px 4px #072142;
+  position: relative;
+  z-index: 20;
 }
 .contact-view {
   position: relative;
@@ -75,14 +97,32 @@
   margin-bottom: 50px;
 }
 .contact-bg {
-  background: url("~@/assets/imags/dam-water.jpg")  no-repeat center;
-  background-size: cover;
   position: absolute;
     top: 15%;
     right: 0%;
-    width: 65%;
-    height: 100%;
+  width: 65%;
+  height: 100%;
+  z-index: 1;
+}
+.contact-bg::before,
+.contact-bg::after {
+  position: absolute;
+  bottom: 10px;
   z-index: -1;
+  content: '';
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 10px 15px rgba(0,0,0,.5);
+}
+.contact-bg::before {
+  left: 10px;
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.contact-bg::after {
+  right: 10px;
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .contact-title {
   position: absolute;
@@ -94,6 +134,7 @@
 }
 .contact-link {
   margin-top: 8vh;
+  text-align: center;
 }
 .contact-text {
   justify-content: center;
@@ -113,8 +154,5 @@
   font-size: 1.4rem;
   text-decoration: none;
   color: skyblue;
-}
-.twitter {
-  text-decoration: none;
 }
 </style>
