@@ -152,7 +152,7 @@ export default {
           },
         ],
         nextUrl: '/contact',
-        backUrl: '/about'
+        backUrl: '/works/2'
       }
     },
     components: {

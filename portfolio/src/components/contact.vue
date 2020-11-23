@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       contact_img: require("@/assets/img/dambo.jpg"),
-      backUrl: '/works'
+      backUrl: '/works/3'
     }
   },
   components: {

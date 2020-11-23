@@ -51,22 +51,34 @@
       </v-row>
 
       </v-container>
+
+      <back-button :back-url="backUrl" />
+      <next-button :next-url="nextUrl" />
+
     </div>
 </template>
 
 <script>
+import NextButton from '../components/NextButton.vue'
+import BackButton from '../components/BackButton.vue'
+
 export default {
   data() {
     return {
       ujitoku_src: require("@/assets/img/ujitoku.jpg"),
       kousei_src: require("@/assets/img/kousei.jpg"),
+      nextUrl: '/about/belief',
+      backUrl: '/about'
     }
   },
+  components: {
+    NextButton,
+    BackButton
+  }
 }
 </script>
 
 <style scoped>
-
 
 #history {
   height: 90vh;

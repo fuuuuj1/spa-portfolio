@@ -29,80 +29,15 @@
 
       </v-row>
       </v-container>
+
       <back-button :back-url="backUrl" />
       <next-button :next-url="nextUrl" />
+
     </div>
 
 
       <!-- ランダムに画像を配置するfanctionの実装 画像は6枚ほど？ toolchipの設定 -->
-    <image-view/>
-
-    <div id="history">
-
-      <v-container :fulid="true">
-      <h1>Work history</h1>
-
-        <v-row>
-
-            <v-col cols="7">
-              <div class="first-work-title">
-                <h3>(2014 - 2019) 宇治徳洲会病院</h3>
-              </div>
-
-              <div class="first-work-text">
-                <p>救急の現場で活躍できる人材になりたい思いがあり入職</p>
-                <p>日々の業務に邁進するだけでなく、チームのために行動してきた結果、主任レベルの方々が参加するマネジメント研修会のメンバーとなり、チーム運営の技術、モチベーション向上などの方法を学習、実践する</p>
-                <p>災害対応の研修や防災訓練などに主体的に参加することで、1000名以上いる職員の中からDMATメンバーに選出される</p>
-              </div>
-            </v-col>
-
-          <v-col cols="5">
-            <div class="first-work-image">
-              <v-img
-                v-bind:src="ujitoku_src">
-              </v-img>
-            </div>
-          </v-col>
-
-        </v-row>
-
-        <!-- <div>
-          <v-icon x-large>mdi-transfer-down</v-icon>
-        </div> -->
-
-      <v-row>
-
-        <v-col cols="5">
-        <div class="second-work-image">
-          <v-img
-            v-bind:src="kousei_src">
-          </v-img>
-        </div>
-        </v-col>
-
-        <v-col cols="7">
-          <div class="second-work-title">
-            <h3>(2020 - 現在) 興生総合病院</h3>
-          </div>
-          <div class="second-work-text">
-            <p>家庭の事情により一時広島に戻ることに</p>
-            <p></p>
-          </div>
-        </v-col>
-
-      </v-row>
-
-      </v-container>
-    </div>
-
-
-    <!-- belief部分の記載 -->
-    <my-belief/>
-
-    <div id="next">
-      <!-- 今後学んでいくこと、将来目指す人物象の宣言 -->
-    </div>
-
+    <!-- <image-view/> -->
 
   </div>
 </template>
@@ -110,21 +45,16 @@
 <script>
 import NextButton from '../components/NextButton.vue'
 import BackButton from '../components/BackButton.vue'
-import ImageView from './ImageView.vue'
-import MyBelief from './MyBelief.vue'
+
 export default {
   data() {
     return {
       profile_src: require("@/assets/img/IMG_0711.jpeg"),
-      ujitoku_src: require("@/assets/img/ujitoku.jpg"),
-      kousei_src: require("@/assets/img/kousei.jpg"),
-      nextUrl: '/works',
+      nextUrl: '/about/history',
       backUrl: '/'
     }
   },
   components: {
-    MyBelief,
-    ImageView,
     NextButton,
     BackButton
   }
@@ -170,43 +100,5 @@ export default {
 }
 .profile-photo {
   box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
-}
-#history {
-  height: 90vh;
-  width: 100%;
-}
-#history h1 {
-  text-align: left;
-  font-size: 3.5rem;
-  color: #072142;
-  letter-spacing: 0.12em;
-  font-family: "futura_m";
-  margin-right: 3.2rem;
-  padding-top: 1rem;
-  margin-bottom: 5vh;
-}
-.first-work-title {
-  text-align: left;
-  font-size: 1.3rem;
-  letter-spacing: 0.15em;
-  font-weight: bold;
-  margin-bottom: 1.3rem;
-}
-.first-work-text {
-  text-align: left;
-  letter-spacing: 0.08rem;
-  line-height: 1.9;
-}
-.second-work-title {
-  text-align: left;
-  font-size: 1.3rem;
-  letter-spacing: 0.15em;
-  font-weight: bold;
-  margin-bottom: 1.3rem;
-}
-.second-work-text {
-  text-align: left;
-  letter-spacing: 0.08rem;
-  line-height: 1.9;
 }
 </style>

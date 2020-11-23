@@ -89,7 +89,7 @@ export default {
   data() {
     return {
       nextUrl: '/works',
-      backUrl: '/'
+      backUrl: '/about/history'
     }
   },
   components: {
@@ -101,9 +101,8 @@ export default {
 
 <style>
 #belief {
-  height: 100vh;
+  height:  90vh;
   width: 100%;
-  margin-top: 15vh;
   position: relative;
 }
 #belief h1 {
