@@ -3,7 +3,7 @@
 
     <div class="top-visual">
       <v-img
-      v-bind:src="home_src"
+      v-bind:src="home_img"
       max-height="550"></v-img>
     </div>
 
@@ -30,7 +30,7 @@ import NextButton from '../components/NextButton.vue'
 export default {
   data() {
     return {
-      home_src: require("@/assets/imags/seto.jpg"),
+      home_img: require("@/assets/img/seto.jpg"),
       nextUrl: '/about'
     }
   },

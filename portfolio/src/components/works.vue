@@ -34,7 +34,90 @@
         <div class="works-text">
           <p class="app-taget"><span class="strong">ターゲット : </span>放射線を扱う業務に携わる医療従事者</p>
           <p class="app-feature"><span class="strong">出来る事 : </span>自身の被ばく線量を把握しながら、年間の被ばく線量限度を確認</p>
-          <p class="app-tech"><span class="strong">使用技術 : </span>アイコンの列挙</p>
+          <p class="app-tech"><span class="strong">使用技術 : </span>
+
+            <span class="tech-icon">
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon
+                    color="laravel"
+                    v-on="on"
+                    v-bind="attrs"
+                  >mdi-laravel</v-icon>
+                </template>
+                <span>Laravel 5.8</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="mdbootstrap"
+                  v-on="on"
+                  v-bind="attrs"
+                  >mdi-bootstrap</v-icon>
+                </template>
+                <span>MDBootstrap</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="jquery"
+                  v-on="on"
+                  v-bind="attrs"
+                  >mdi-jquery</v-icon>
+                </template>
+                <span>jQuery</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="vue"
+                  v-on="on"
+                  v-bind="attrs"
+                  >mdi-vuejs</v-icon>
+                </template>
+                <span>Vue 2.6</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="mysql"
+                  v-on="on"
+                  v-bind="attrs">mdi-database</v-icon>
+                </template>
+                <span>MySQL 5.7</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="docker"
+                  v-on="on"
+                  v-bind="attrs">mdi-docker</v-icon>
+                </template>
+                <span>Docker,Docker-compose</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+              <v-icon color="git"
+              v-on="on"
+                  v-bind="attrs">mdi-git</v-icon>
+                </template>
+                <span>Git</span>
+              </v-tooltip>
+
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="github"
+                  v-on="on"
+                  v-bind="attrs">mdi-github</v-icon>
+                </template>
+                <span>GitHub</span>
+              </v-tooltip>
+
+            </span>
+          </p>
+
           <p class="github-code"><span class="strong">GitHub : </span>リンクの記述</p>
         </div>
 
@@ -89,7 +172,6 @@ export default {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    color: #828c96;
     overflow-x: hidden;
 }
 #works h1 {
@@ -114,6 +196,7 @@ export default {
 }
 .works-subtitle {
   margin-bottom: 1rem;
+  color: #828c96;
 }
 .works-subtitle h2 {
   text-align: left;
@@ -138,5 +221,9 @@ export default {
 }
 .works-text p span {
   font-size: 1.4rem;
+  color: #828c96;
+}
+.works-text .tech-icon i {
+  margin-left: 1rem;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <v-app id="app">
 
     <header id="header">
 
@@ -54,8 +54,7 @@
       clipped-left
       absolute
       dark
-      elevate-on-scroll
-      scroll-target="#scrolling-techniques-7">
+      >
       <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>my-portfolio</v-toolbar-title>
@@ -77,7 +76,7 @@
       <router-view/>
     </v-main>
 
-  </div>
+  </v-app>
 </template>
 
 <script>

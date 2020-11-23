@@ -115,9 +115,9 @@ import MyBelief from './MyBelief.vue'
 export default {
   data() {
     return {
-      profile_src: require("@/assets/imags/IMG_0711.jpeg"),
-      ujitoku_src: require("@/assets/imags/ujitoku.jpg"),
-      kousei_src: require("@/assets/imags/kousei.jpg"),
+      profile_src: require("@/assets/img/IMG_0711.jpeg"),
+      ujitoku_src: require("@/assets/img/ujitoku.jpg"),
+      kousei_src: require("@/assets/img/kousei.jpg"),
       nextUrl: '/works',
       backUrl: '/'
     }

@@ -58,14 +58,16 @@
 export default {
   data() {
     return {
-      ujitoku_src: require("@/assets/imags/ujitoku.jpg"),
-      kousei_src: require("@/assets/imags/kousei.jpg"),
+      ujitoku_src: require("@/assets/img/ujitoku.jpg"),
+      kousei_src: require("@/assets/img/kousei.jpg"),
     }
   },
 }
 </script>
 
-<style>
+<style scoped>
+
+
 #history {
   height: 90vh;
   width: 100%;
