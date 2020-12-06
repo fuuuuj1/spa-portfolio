@@ -167,15 +167,15 @@ export default {
               // },
               {
                 name:'Work history',
-                link:'/history',
+                link:'/about/history',
               },
               {
                 name:'Work history2',
-                link:'/history2',
+                link:'/about/history2',
               },
               {
                 name:'Belief',
-                link:'/belief',
+                link:'/about/belief',
               },
               // {
               //   name:'next step',
@@ -196,11 +196,11 @@ export default {
               },
               {
                 name:'portfolio2',
-                link:'/works2'
+                link:'/works/2'
               },
               {
                 name:'portfolio3',
-                link:'/works3'
+                link:'/works/3'
               },
               // {
               //   name:'article',
