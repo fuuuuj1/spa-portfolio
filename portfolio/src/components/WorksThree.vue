@@ -8,7 +8,6 @@
         <div class="works-view1">
           <v-carousel
             :show-arrows="false"
-            :hide-delimiter-background="true"
             :height="350"
             class="work1-carousel"
             >
