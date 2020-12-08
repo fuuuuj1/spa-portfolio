@@ -1,16 +1,16 @@
 <template>
 <div id="works">
   <v-container class="works-container">
-    <h1>PHPで作成した体重管理サイトの紹介</h1>
+    <h1>BMI calculate</h1>
 
     <v-row class="works-row">
       <v-col cols="5" class="works-image">
         <div class="works-view1">
           <v-carousel
+            cycle
             :show-arrows="false"
-            :hide-delimiter-background="true"
             :height="350"
-            class="work1-carousel"
+            class="work2-carousel"
             >
               <v-carousel-item
                 v-for="(item,i) in items"
@@ -24,15 +24,15 @@
       <v-col cols="7">
 
         <div class="works-subtitle">
-          <h2>医療従事者の業務上における被ばくを管理するサイト</h2>
-          <h3>自身の被ばく線量を把握していない方が多い。被ばく線量を直感的に把握するために作成</h3>
+          <h2>BMIの算出と体重をグラフ表示するサイト</h2>
+          <h3>フレームワークなしでPHPで作成 グラフ表示はChart.jsを利用</h3>
         </div>
 
         <hr class="works-hr">
 
         <div class="works-text">
-          <p class="app-taget"><span class="strong">ターゲット : </span>放射線を扱う業務に携わる医療従事者</p>
-          <p class="app-feature"><span class="strong">出来る事 : </span>自身の被ばく線量を把握しながら、年間の被ばく線量限度を確認</p>
+          <p class="app-taget"><span class="strong">ターゲット : </span>毎日の体重管理をする方々</p>
+          <p class="app-feature"><span class="strong">出来る事 : </span>入力した身長、体重からBMIの算出。体重を時系列でグラフ表示</p>
           <p class="app-tech"><span class="strong">使用技術 : </span>
 
             <span class="tech-icon">
@@ -40,22 +40,22 @@
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
                   <v-icon
-                    color="laravel"
+                    color="php"
                     v-on="on"
                     v-bind="attrs"
-                  >mdi-laravel</v-icon>
+                  >mdi-language-php</v-icon>
                 </template>
-                <span>Laravel 5.8</span>
+                <span>php 7</span>
               </v-tooltip>
 
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="mdbootstrap"
+                  <v-icon color="bootstrap"
                   v-on="on"
                   v-bind="attrs"
                   >mdi-bootstrap</v-icon>
                 </template>
-                <span>MDBootstrap</span>
+                <span>Bootstrap</span>
               </v-tooltip>
 
               <v-tooltip bottom>
@@ -70,16 +70,6 @@
 
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="vue"
-                  v-on="on"
-                  v-bind="attrs"
-                  >mdi-vuejs</v-icon>
-                </template>
-                <span>Vue 2.6</span>
-              </v-tooltip>
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
                   <v-icon color="mysql"
                   v-on="on"
                   v-bind="attrs">mdi-database</v-icon>
@@ -89,35 +79,16 @@
 
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="docker"
-                  v-on="on"
-                  v-bind="attrs">mdi-docker</v-icon>
-                </template>
-                <span>Docker,Docker-compose</span>
-              </v-tooltip>
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-              <v-icon color="git"
+              <v-icon color="mamp"
               v-on="on"
-                  v-bind="attrs">mdi-git</v-icon>
+                  v-bind="attrs">mdi-elephant</v-icon>
                 </template>
-                <span>Git</span>
-              </v-tooltip>
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="github"
-                  v-on="on"
-                  v-bind="attrs">mdi-github</v-icon>
-                </template>
-                <span>GitHub</span>
+                <span>MAMP</span>
               </v-tooltip>
 
             </span>
           </p>
 
-          <p class="github-code"><span class="strong">GitHub : </span>リンクの記述</p>
         </div>
 
       </v-col>
@@ -138,16 +109,13 @@ export default {
       return {
         items: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            src: require("@/assets/img/bmi1.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: require("@/assets/img/bmi2.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: require("@/assets/img/bmi3.jpg"),
           },
         ],
         nextUrl: '/works/3',
@@ -222,5 +190,8 @@ export default {
 }
 .works-text .tech-icon i {
   margin-left: 1rem;
+}
+.work2-carousel .v-image__image--cover{
+  background-size: contain;
 }
 </style>

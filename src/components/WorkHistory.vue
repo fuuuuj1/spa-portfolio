@@ -9,6 +9,7 @@
             <v-col cols="7">
               <div class="first-work-title">
                 <h3>(2014 - 2019) 宇治徳洲会病院</h3>
+                <h5>24時間体制で救命救急を提供する基幹病院</h5>
               </div>
 
               <div class="first-work-text">
@@ -26,6 +27,16 @@
             </div>
           </v-col>
 
+        </v-row>
+
+        <v-row>
+          <v-col>
+            <div class="work-about">
+              <span>診療放射線技師とは・・・放射線を扱い医療画像を撮影する医療現場の放射線の専門家 レントゲン,CT,MRI,Angioなど多数のモダリティを扱う
+              </span>
+              <span>DMATとは・・・災害急性期に活動できる機動性を持ったトレーニングを受けた医療チーム Ｄisaster Ｍedical Ａssistance Ｔeamの略語</span>
+            </div>
+          </v-col>
         </v-row>
 
       </v-container>
@@ -94,5 +105,14 @@ export default {
 }
 .first-work-image {
   box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.work-about {
+  justify-content: center;
+  vertical-align: middle;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  line-height: 2;
+  color: #828C96;
 }
 </style>

@@ -1,14 +1,14 @@
 <template>
 <div id="works">
   <v-container class="works-container">
-    <h1>このプロフィールサイトの紹介</h1>
+    <h1>Radiation Docimeter</h1>
 
     <v-row class="works-row">
       <v-col cols="5" class="works-image">
         <div class="works-view1">
           <v-carousel
+            cycle
             :show-arrows="false"
-            :hide-delimiter-background="true"
             :height="350"
             class="work1-carousel"
             >
@@ -32,7 +32,7 @@
 
         <div class="works-text">
           <p class="app-taget"><span class="strong">ターゲット : </span>放射線を扱う業務に携わる医療従事者</p>
-          <p class="app-feature"><span class="strong">出来る事 : </span>自身の被ばく線量を把握しながら、年間の被ばく線量限度を確認</p>
+          <p class="app-feature"><span class="strong">出来る事 : </span>グラフで年間の被ばく線量と被ばく線量限度を確認できる</p>
           <p class="app-tech"><span class="strong">使用技術 : </span>
 
             <span class="tech-icon">
@@ -114,10 +114,20 @@
                 <span>GitHub</span>
               </v-tooltip>
 
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="github"
+                  v-on="on"
+                  v-bind="attrs">mdi-alpha-c-circle</v-icon>
+                </template>
+                <span>CircleCI</span>
+              </v-tooltip>
+
             </span>
           </p>
 
-          <p class="github-code"><span class="strong">GitHub : </span>リンクの記述</p>
+          <p class="github-code"><span class="strong">GitHub : </span><a href="https://github.com/fuuuuj1/RD_app" target="blank">https://github.com/fuuuuj1/RD_app</a></p>
+          <p class="github-code"><span class="strong">URL : </span><a href="http://rdmeter.herokuapp.com">http://rdmeter.herokuapp.com</a></p>
         </div>
 
       </v-col>
@@ -138,20 +148,20 @@ export default {
       return {
         items: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            src: require("@/assets/img/demo1.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: require("@/assets/img/demo2.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: require("@/assets/img/demo3.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: require("@/assets/img/demo4.jpg"),
           },
         ],
-        nextUrl: '/contact',
-        backUrl: '/works/2'
+        nextUrl: '/works/2',
+        backUrl: '/about/belief'
       }
     },
     components: {
@@ -222,5 +232,8 @@ export default {
 }
 .works-text .tech-icon i {
   margin-left: 1rem;
+}
+.work1-carousel .v-image__image--cover{
+  background-size: contain;
 }
 </style>

@@ -10,7 +10,7 @@
     <div class="declaration">
       <h1>
         <span>エンジニアを</span>
-        <span>目指し転職活動中</span>
+        <span class="gray">目指し転職活動中</span>
         <span class="hope">関西でバックエンド志望</span>
       </h1>
     </div>
@@ -30,7 +30,7 @@ import NextButton from '../components/NextButton.vue'
 export default {
   data() {
     return {
-      home_img: require("@/assets/img/seto.jpg"),
+      home_img: require("@/assets/img/home-bridge.jpg"),
       nextUrl: '/about'
     }
   },
@@ -56,7 +56,7 @@ export default {
 .declaration {
   position: absolute;
   right: 7%;
-  top: 150px;
+  top: 140px;
   text-align: right;
   font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   color: black;
@@ -71,7 +71,7 @@ export default {
 .declaration h1 span{
   display: block;
     padding: 0 0 4px 0;
-    margin: 28px 0 0 0;
+    margin: 38px 0 0 0;
     font-size: 74px;
     letter-spacing: 0.06em;
 }

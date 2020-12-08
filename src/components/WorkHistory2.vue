@@ -2,16 +2,19 @@
   <div id="history">
 
       <v-container>
-      <h1>Work history</h1>
+      <h1>Work history2</h1>
 
       <v-row>
 
         <v-col cols="7">
           <div class="second-work-title">
             <h3>(2020 - 現在) 興生総合病院</h3>
+            <h5>三原市で随一の救急と整形外科に特化した病院</h5>
           </div>
           <div class="second-work-text">
             <p>家庭の事情により一時広島に戻ることに</p>
+            <p>入職して3ヶ月で夜勤と、未経験であった胃透視業務を担当<br>
+            技術のキャッチアップの速さからCTメイン担当に選任される。組織運営の助力のためにメンバーのスキルマップ作成を担当するなど、マネジメント業務にも力を入れつつ日々の業務をこなしています</p>
             <p></p>
           </div>
         </v-col>
@@ -43,7 +46,7 @@ import BackButton from '../components/BackButton.vue'
 export default {
   data() {
     return {
-      kousei_src: require("@/assets/img/kousei.jpg"),
+      kousei_src: require("@/assets/img/kousei_d.jpg"),
       nextUrl: '/about/belief',
       backUrl: '/about/history'
     }

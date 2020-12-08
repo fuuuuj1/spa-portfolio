@@ -1,14 +1,13 @@
 <template>
 <div id="works">
   <v-container class="works-container">
-    <h1>Radiation Docimeter</h1>
+    <h1>my-portfolio</h1>
 
     <v-row class="works-row">
       <v-col cols="5" class="works-image">
         <div class="works-view1">
           <v-carousel
             :show-arrows="false"
-            :hide-delimiter-background="true"
             :height="350"
             class="work1-carousel"
             >
@@ -24,49 +23,18 @@
       <v-col cols="7">
 
         <div class="works-subtitle">
-          <h2>医療従事者の業務上における被ばくを管理するサイト</h2>
-          <h3>自身の被ばく線量を把握していない方が多い。被ばく線量を直感的に把握するために作成</h3>
+          <h2>Vue.jsを用いたポートフォリオサイト</h2>
+          <h3>スクロール不要。クリックのみで全てのページを閲覧できるようにSPA仕様</h3>
         </div>
 
         <hr class="works-hr">
 
         <div class="works-text">
-          <p class="app-taget"><span class="strong">ターゲット : </span>放射線を扱う業務に携わる医療従事者</p>
-          <p class="app-feature"><span class="strong">出来る事 : </span>自身の被ばく線量を把握しながら、年間の被ばく線量限度を確認</p>
+          <p class="app-taget"><span class="strong">ターゲット : </span>新戦力を探していらっしゃる企業の方々</p>
+          <p class="app-feature"><span class="strong">出来る事 : </span>好奇心旺盛な私の、簡単な自己紹介をするためのサイト</p>
           <p class="app-tech"><span class="strong">使用技術 : </span>
 
             <span class="tech-icon">
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-icon
-                    color="laravel"
-                    v-on="on"
-                    v-bind="attrs"
-                  >mdi-laravel</v-icon>
-                </template>
-                <span>Laravel 5.8</span>
-              </v-tooltip>
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="mdbootstrap"
-                  v-on="on"
-                  v-bind="attrs"
-                  >mdi-bootstrap</v-icon>
-                </template>
-                <span>MDBootstrap</span>
-              </v-tooltip>
-
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="jquery"
-                  v-on="on"
-                  v-bind="attrs"
-                  >mdi-jquery</v-icon>
-                </template>
-                <span>jQuery</span>
-              </v-tooltip>
 
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
@@ -75,16 +43,17 @@
                   v-bind="attrs"
                   >mdi-vuejs</v-icon>
                 </template>
-                <span>Vue 2.6</span>
+                <span>Vue 2.6, Vue Cli, Vue Router</span>
               </v-tooltip>
 
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon color="mysql"
+                  <v-icon color="vuetify"
                   v-on="on"
-                  v-bind="attrs">mdi-database</v-icon>
+                  v-bind="attrs"
+                  >mdi-vuetify</v-icon>
                 </template>
-                <span>MySQL 5.7</span>
+                <span>Vuetify 2.3</span>
               </v-tooltip>
 
               <v-tooltip bottom>
@@ -114,10 +83,19 @@
                 <span>GitHub</span>
               </v-tooltip>
 
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon color="github"
+                  v-on="on"
+                  v-bind="attrs">mdi-alpha-n-box-outline</v-icon>
+                </template>
+                <span>Notion</span>
+              </v-tooltip>
+
             </span>
           </p>
 
-          <p class="github-code"><span class="strong">GitHub : </span>リンクの記述</p>
+          <p class="github-code"><span class="strong">GitHub : </span><a href="https://github.com/fuuuuj1/spa-portfolio" target="blank">https://github.com/fuuuuj1/spa-portfolio</a></p>
         </div>
 
       </v-col>
@@ -150,8 +128,8 @@ export default {
             src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
           },
         ],
-        nextUrl: '/works/2',
-        backUrl: '/about/belief'
+        nextUrl: '/contact',
+        backUrl: '/works/2'
       }
     },
     components: {
