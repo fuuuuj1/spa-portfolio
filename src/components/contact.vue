@@ -25,7 +25,7 @@
         <v-col cols="4">
           <v-btn
           icon
-          href="https://twitter.com/">
+          href="https://twitter.com/fuuuucham1103">
           <v-icon
           size="80"
           color="twitter"

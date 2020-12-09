@@ -191,15 +191,15 @@ export default {
             lists:
             [
               {
-                name:'portfolio',
+                name:'Radiation Dosimeter',
                 link:'/works'
               },
               {
-                name:'portfolio2',
+                name:'BMI calculate',
                 link:'/works/2'
               },
               {
-                name:'portfolio3',
+                name:'my-portfolio',
                 link:'/works/3'
               },
               // {
