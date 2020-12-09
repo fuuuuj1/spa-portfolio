@@ -1,7 +1,7 @@
 <template>
 <div id="works">
   <v-container class="works-container">
-    <h1>Radiation Docimeter</h1>
+    <h1>Radiation Dosimeter</h1>
 
     <v-row class="works-row">
       <v-col cols="5" class="works-image">

@@ -4,7 +4,7 @@
   <h1 class="heading">Belief</h1>
 
   <v-row>
-    <v-col>
+    <v-col class="belief-col">
       <div class="belief-img">
         <!-- <img src="../assets/icons/charity.svg" alt="握手" class="useful"> -->
         <!-- <v-icon size="125px">mdi-charity</v-icon> -->
@@ -21,13 +21,18 @@
       </div>
 
       <div class="belief-title">
-        <h3>多くの人の助けとなる</h3>
+        <h3>共創</h3>
       </div>
 
-      <div class="belief-text"></div>
+
+        <p class="belief-text">ライバルと競い合いお互いを高めていく。<br>
+          ではなく、互いの強み、立場の違いを認めて協力をしながら、周囲の人や社会に貢献していく。<br>
+          そのようにして、仕事をともにするメンバーだけでなくクライアントや、これから出会って関わっていく人々と、良好な関係を築きながら社会活動に励んでいきたいと考えています。
+        </p>
+
     </v-col>
 
-    <v-col>
+    <v-col class="belief-col">
       <div class="belief-img">
         <!-- <img src="../assets/icons/book-open-variant.svg" alt="本のアイコン" class="learn"> -->
         <!-- <v-icon size="125px">mdi-book-open-variant</v-icon> -->
@@ -44,17 +49,24 @@
       </div>
 
       <div class="belief-title">
-        <h3>学んだことを活かす</h3>
+        <h3>探求心</h3>
       </div>
-      <div class="belief-text"></div>
+
+      <p class="belief-text">新しい物事に対して積極的に関わっていくこと、学んでいくことが大好きです。<br>
+        仕事終わりの余暇にはプログラミングの学習。隙間時間には読書が最近のライフスタイルです。<br>
+        読書やfeedlyで得た新しい知識を、Notionにストックしていくのが最近のトレンドです。<br>
+
+
+        </p>
+
     </v-col>
 
-    <v-col>
+    <v-col class="belief-col">
       <div class="belief-img">
         <!-- <img src="../assets/icons/account-group.svg" alt="グループのアイコン" class="cooperate"> -->
         <!-- <v-icon size="125px">mdi-account-group</v-icon> -->
-        <svg viewBox="0 0 24 24" id="group">
-          <path fill="gradient3" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+        <svg viewBox="0 0 24 24" id="summit">
+          <path fill="gradient3" d="M15,3H17L22,5L17,7V10.17L22,21H2L8,13L11.5,17.7L15,10.17V3Z" />
           <defs>
             <linearGradient id="gradient3">
               <stop class="stop1" offset="0%"/>
@@ -63,12 +75,19 @@
             </linearGradient>
           </defs>
         </svg>
+
+
       </div>
 
       <div class="belief-title">
-        <h3>共創していく</h3>
+        <h3>挑戦</h3>
       </div>
-      <div class="belief-text"></div>
+
+      <p class="belief-text">常に挑戦し続けていく。目標を立て、達成のために何を行うべきかを逆算して一つ一つ確実に行動していくようにしています。<br>
+      今年の6月からバックエンドエンジニアとなるために行動してきました。<br>
+      現在はAWSを学び、クラウドでのインフラサービス構築に挑戦しています。
+      </p>
+
     </v-col>
 
 
@@ -116,6 +135,9 @@ export default {
   padding-top: 1rem;
   margin-bottom: 5vh;
 }
+.belief-col {
+  padding:20px;
+}
 .belief-img {
   width: 42.016%;
     margin: 0 auto 2.4rem;
@@ -147,7 +169,7 @@ export default {
 #book-open {
   fill: url("#gradient2");
 }
-#group {
+#summit {
   fill: url("#gradient3");
 }
 .belief-img .learn{
@@ -166,7 +188,7 @@ export default {
     font-family: "futura_de";
     word-break: break-all;
 }
-.belief-text p {
+.belief-text {
     line-height: 2;
     word-wrap: break-word;
     white-space: normal;

@@ -7,6 +7,7 @@
       <v-col cols="5" class="works-image">
         <div class="works-view1">
           <v-carousel
+            cycle
             :show-arrows="false"
             :height="350"
             class="work1-carousel"
@@ -30,7 +31,7 @@
         <hr class="works-hr">
 
         <div class="works-text">
-          <p class="app-taget"><span class="strong">ターゲット : </span>新戦力を探していらっしゃる企業の方々</p>
+          <p class="app-taget"><span class="strong">ターゲット : </span>ポテンシャル採用を検討中の企業の方々</p>
           <p class="app-feature"><span class="strong">出来る事 : </span>好奇心旺盛な私の、簡単な自己紹介をするためのサイト</p>
           <p class="app-tech"><span class="strong">使用技術 : </span>
 
@@ -83,19 +84,21 @@
                 <span>GitHub</span>
               </v-tooltip>
 
-              <v-tooltip bottom>
+              <!-- <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
                   <v-icon color="github"
                   v-on="on"
                   v-bind="attrs">mdi-alpha-n-box-outline</v-icon>
                 </template>
                 <span>Notion</span>
-              </v-tooltip>
+              </v-tooltip> -->
 
             </span>
           </p>
 
           <p class="github-code"><span class="strong">GitHub : </span><a href="https://github.com/fuuuuj1/spa-portfolio" target="blank">https://github.com/fuuuuj1/spa-portfolio</a></p>
+
+          <p class="comment"><span class="strong">スライド : </span>簡単な趣味の紹介です 写真、サバゲー、ボードゲームなど</p>
         </div>
 
       </v-col>
@@ -116,16 +119,16 @@ export default {
       return {
         items: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            src: require("@/assets/img/port0.jpg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: require("@/assets/img/port1.jpeg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: require("@/assets/img/port2.jpeg"),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: require("@/assets/img/port3.jpg"),
           },
         ],
         nextUrl: '/contact',
