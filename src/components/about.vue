@@ -9,7 +9,7 @@
 
       <v-row>
 
-      <v-col cols="6">
+      <v-col cols="12" md="6">
       <div class="profile-title">
         <h3>藤木 章吾</h3>
         <p>エンジニアを目指す診療放射線技師</p>
@@ -21,7 +21,7 @@
       </div>
       </v-col>
 
-      <v-col cols=6>
+      <v-col cols=12 md="6">
       <div class="profile-photo">
         <v-img
           v-bind:src="profile_src">
@@ -103,5 +103,43 @@ export default {
 }
 .profile-photo {
   box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
+}
+/* ---------------------------- */
+@media screen and (max-width:720px){
+  #profile h1 {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #072142;
+  letter-spacing: 0.2em;
+  font-family: "futura_m";
+  margin-right: 3.2rem;
+  padding-top: 0.6rem;
+  margin-bottom: 1vh;
+}
+.profile-title {
+    color: #072142;
+  margin-bottom: 1.2rem;
+}
+.profile-title  h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.3em;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+.profile-title p {
+  font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    line-height: 1.1;
+    text-align: left;
+}
+.profile-text {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+.profile-photo {
+  box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
+}
 }
 </style>
