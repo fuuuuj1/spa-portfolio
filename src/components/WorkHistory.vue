@@ -6,7 +6,7 @@
 
         <v-row>
 
-            <v-col cols="7">
+            <v-col cols="12" md="7">
               <div class="first-work-title">
                 <h3>(2014 - 2019) 宇治徳洲会病院</h3>
                 <h5>24時間体制で救命救急を提供する基幹病院</h5>
@@ -19,7 +19,7 @@
               </div>
             </v-col>
 
-          <v-col cols="5">
+          <v-col cols="12" md="5">
             <div class="first-work-image">
               <v-img
                 v-bind:src="ujitoku_src">
@@ -41,9 +41,10 @@
 
       </v-container>
 
-      <back-button :back-url="backUrl" />
-      <next-button :next-url="nextUrl" />
-
+      <div class="btn_content">
+        <back-button :back-url="backUrl" class="workhistory_btn"/>
+        <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+      </div>
     </div>
 </template>
 
@@ -114,5 +115,61 @@ export default {
   flex-direction: column;
   line-height: 2;
   color: #828C96;
+}
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+/* -------------------------- */
+@media screen and (max-width:720px){
+  #history {
+    height: 100vh;
+  }
+  #history h1 {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #072142;
+  letter-spacing: 0.12em;
+  font-family: "futura_m";
+  margin-right: 3.2rem;
+  padding-top: 1rem;
+  margin-bottom: 1vh;
+}
+.first-work-title {
+  text-align: left;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
+.first-work-title h3 {
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+.first-work-text {
+  text-align: left;
+  letter-spacing: 0.07rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+.first-work-image {
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.work-about {
+  justify-content: center;
+  vertical-align: middle;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  line-height: 2;
+  color: #828C96;
+  font-size: 0.9rem;
+}
 }
 </style>
