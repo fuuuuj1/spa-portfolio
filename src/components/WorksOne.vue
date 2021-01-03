@@ -1,10 +1,10 @@
 <template>
 <div id="works">
-  <v-container class="works-container">
+  <v-container>
     <h1>Radiation Dosimeter</h1>
 
     <v-row class="works-row">
-      <v-col cols="5" class="works-image">
+      <v-col cols="12" md="5" class="works-image">
         <div class="works-view1">
           <v-carousel
             cycle
@@ -21,7 +21,7 @@
         </div>
       </v-col>
 
-      <v-col cols="7">
+      <v-col cols="12" md="7">
 
         <div class="works-subtitle">
           <h2>医療従事者の業務上における被ばくを管理するサイト</h2>
@@ -127,14 +127,22 @@
           </p>
 
           <p class="github-code"><span class="strong">GitHub : </span><a href="https://github.com/fuuuuj1/RD_app" target="blank">https://github.com/fuuuuj1/RD_app</a></p>
-          <p class="github-code"><span class="strong">URL : </span><a href="http://rdmeter.herokuapp.com">http://rdmeter.herokuapp.com</a></p>
+          <p class="github-code"><span class="strong">URL : </span><a href="https://www.radiationdosimeter.tech/">https://www.radiationdosimeter.tech</a></p>
         </div>
 
       </v-col>
     </v-row>
   </v-container>
-  <back-button :back-url="backUrl" />
-  <next-button :next-url="nextUrl" />
+
+  <div class="hide_mobile">
+    <back-button :back-url="backUrl" />
+    <next-button :next-url="nextUrl" />
+  </div>
+
+  <div class="btn_content hide_pc">
+    <back-button :back-url="backUrl" class="workhistory_btn"/>
+    <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+  </div>
 
 </div>
 </template>
@@ -171,7 +179,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #works {
   position: relative;
   height: 90vh;
@@ -190,9 +198,6 @@ export default {
   margin-right: 3.2rem;
   padding-top: 1rem;
   margin-bottom: 7vh;
-}
-.works-container {
-  height: 80vh;
 }
 .works-row {
   height: auto;
@@ -235,5 +240,51 @@ export default {
 }
 .work1-carousel .v-image__image--cover{
   background-size: contain;
+}
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+.hide_pc {
+  display:none
+}
+@media screen and (max-width:720px){
+  #works {
+    height: 100vh;
+  }
+  #works h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1vh;
+  }
+  .works-subtitle h2 {
+    font-size: 1.3rem;
+  }
+  .works-subtitle h3 {
+    white-space: normal;
+    font-size: 1.1rem;
+  }
+  .works-text p{
+    white-space: normal;
+  }
+  .works-text p span {
+  font-size: 1.1rem;
+  }
+  .works-text p {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  white-space: normal;
+  }
+  .works-text .tech-icon i {
+  margin-left: 0.5rem;
+  }
+  .hide_mobile {
+    display:none
+  }
+  .hide_pc {
+    display:block
+  }
 }
 </style>
