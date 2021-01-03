@@ -104,6 +104,7 @@ export default {
 .btn_content{
   position: relative;
   height: 8vh;
+  margin-top: 8vh;
 }
 .btn_content a {
   position:absolute;
@@ -127,6 +128,9 @@ export default {
     letter-spacing: 0.07rem;
     line-height: 1.6;
     font-size: 0.9rem;
+  }
+  .btn_content {
+    margin-top: 0;
   }
 }
 </style>
