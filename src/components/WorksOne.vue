@@ -266,9 +266,6 @@ export default {
     white-space: normal;
     font-size: 1.1rem;
   }
-  .works-text p{
-    white-space: normal;
-  }
   .works-text p span {
   font-size: 1.1rem;
   }
