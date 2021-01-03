@@ -1,10 +1,10 @@
 <template>
 <div id="works">
-  <v-container class="works-container">
+  <v-container>
     <h1>my-portfolio</h1>
 
     <v-row class="works-row">
-      <v-col cols="5" class="works-image">
+      <v-col cols="12"  md="5" class="works-image">
         <div class="works-view1">
           <v-carousel
             cycle
@@ -21,11 +21,11 @@
         </div>
       </v-col>
 
-      <v-col cols="7">
+      <v-col cols="12" md="7">
 
         <div class="works-subtitle">
           <h2>Vue.jsを用いたポートフォリオサイト</h2>
-          <h3>スクロール不要。クリックのみで全てのページを閲覧できるようにSPA仕様</h3>
+          <h3>PCではスクロール不要。クリックのみで全てのページを閲覧できるようにSPA仕様</h3>
         </div>
 
         <hr class="works-hr">
@@ -104,8 +104,16 @@
       </v-col>
     </v-row>
   </v-container>
-  <back-button :back-url="backUrl" />
-  <next-button :next-url="nextUrl" />
+
+  <div class="hide_mobile">
+    <back-button :back-url="backUrl" />
+    <next-button :next-url="nextUrl" />
+  </div>
+
+  <div class="btn_content hide_pc">
+    <back-button :back-url="backUrl" class="workhistory_btn"/>
+    <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+  </div>
 
 </div>
 </template>
@@ -142,7 +150,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #works {
   position: relative;
   height: 90vh;
@@ -203,5 +211,48 @@ export default {
 }
 .works-text .tech-icon i {
   margin-left: 1rem;
+}
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+.hide_pc {
+  display:none
+}
+@media screen and (max-width:720px){
+  #works {
+    height: 100vh;
+  }
+  #works h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1vh;
+  }
+  .works-subtitle h2 {
+    font-size: 1.3rem;
+  }
+  .works-subtitle h3 {
+    white-space: normal;
+    font-size: 1.1rem;
+  }
+  .works-text p span {
+  font-size: 1.1rem;
+  }
+  .works-text p {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  white-space: normal;
+  }
+  .works-text .tech-icon i {
+  margin-left: 1rem;
+  }
+  .hide_mobile {
+    display:none
+  }
+  .hide_pc {
+    display:block
+  }
 }
 </style>
