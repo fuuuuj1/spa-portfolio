@@ -41,7 +41,8 @@ export default {
 </script>
 
 <style>
-.home {
+/* ---------------------------------------------------- */
+  .home {
   position: relative;
   height: 90vh;
 }
@@ -52,11 +53,10 @@ export default {
     top: 10%;
     left: 0;
 }
-
-.declaration {
+  .declaration {
   position: absolute;
   right: 7%;
-  top: 140px;
+  top: 90px;
   text-align: right;
   font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   color: black;
@@ -83,4 +83,57 @@ export default {
   right: 7%;
   bottom: 12%;
 }
+/* ---------------------------------------------------- */
+/* モバイル対応 */
+@media screen and (max-width:720px) {
+.home {
+  position: relative;
+  height: 90vh;
+}
+.home .top-visual {
+  width: 70%;
+  height: 70vh;
+  position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+.declaration {
+  position: absolute;
+  left: 13%;
+  top: 240px;
+  text-align: left;
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: black;
+}
+.declaration h1 {
+  font-size: 24px;
+    font-family: "Verlag A","Verlag B";
+    font-weight: 800;
+    line-height: 0.5;
+    letter-spacing: 1px;
+}
+.declaration h1 span{
+  display: block;
+    padding: 0 0 4px 0;
+    margin: 28px 0 0 0;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+}
+.declaration h1 .hope {
+  background: white !important;
+}
+.sub-text {
+  position: absolute;
+  right: 7%;
+  bottom: 12%;
+}
+}
+
+
+
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 </style>
