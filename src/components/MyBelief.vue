@@ -4,7 +4,7 @@
   <h1 class="heading">Belief</h1>
 
   <v-row>
-    <v-col class="belief-col">
+    <v-col class="belief-col" cols="12" md="4">
       <div class="belief-img">
         <!-- <img src="../assets/icons/charity.svg" alt="握手" class="useful"> -->
         <!-- <v-icon size="125px">mdi-charity</v-icon> -->
@@ -32,7 +32,7 @@
 
     </v-col>
 
-    <v-col class="belief-col">
+    <v-col class="belief-col" cols="12" md="4">
       <div class="belief-img">
         <!-- <img src="../assets/icons/book-open-variant.svg" alt="本のアイコン" class="learn"> -->
         <!-- <v-icon size="125px">mdi-book-open-variant</v-icon> -->
@@ -61,7 +61,7 @@
 
     </v-col>
 
-    <v-col class="belief-col">
+    <v-col class="belief-col" cols="12" md="4">
       <div class="belief-img">
         <!-- <img src="../assets/icons/account-group.svg" alt="グループのアイコン" class="cooperate"> -->
         <!-- <v-icon size="125px">mdi-account-group</v-icon> -->
@@ -94,13 +94,22 @@
   </v-row>
 
   </v-container>
-  <back-button :back-url="backUrl" />
-  <next-button :next-url="nextUrl" />
+
+  <div class="hide_mobile">
+    <back-button :back-url="backUrl" />
+    <next-button :next-url="nextUrl" />
+  </div>
+
+  <div class="btn_content hide_pc">
+        <back-button :back-url="backUrl" class="workhistory_btn"/>
+        <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+  </div>
+
 </div>
 </template>
 
 
-<script>
+<script scoped>
 import NextButton from '../components/NextButton.vue'
 import BackButton from '../components/BackButton.vue'
 
@@ -193,5 +202,29 @@ export default {
     word-wrap: break-word;
     white-space: normal;
 }
-
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+.hide_pc {
+  display:none
+}
+@media screen and (max-width:720px){
+  #belief {
+    height: 100vh;
+  }
+  #belief h1{
+    font-size: 1.8rem;
+    margin-bottom: 1vh;
+  }
+  .hide_mobile {
+    display:none
+  }
+  .hide_pc {
+    display:block
+  }
+}
 </style>
