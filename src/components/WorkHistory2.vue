@@ -6,7 +6,7 @@
 
       <v-row>
 
-        <v-col cols="7">
+        <v-col cols="12" md="7">
           <div class="second-work-title">
             <h3>(2020 - 現在) 興生総合病院</h3>
             <h5>三原市で随一の救急と整形外科に特化した病院</h5>
@@ -19,7 +19,7 @@
           </div>
         </v-col>
 
-        <v-col cols="5">
+        <v-col cols="12" md="5">
         <div class="second-work-image">
           <v-img
             v-bind:src="kousei_src">
@@ -33,8 +33,10 @@
 
       </v-container>
 
-      <back-button :back-url="backUrl" />
-      <next-button :next-url="nextUrl" />
+      <div class="btn_content">
+        <back-button :back-url="backUrl" class="workhistory_btn"/>
+        <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+      </div>
 
     </div>
 </template>
@@ -98,5 +100,33 @@ export default {
 }
 .second-work-image {
   box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+/* -------------------------- */
+@media screen and (max-width:720px){
+  #history {
+    height: 100vh;
+  }
+  #history h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1vh;
+  }
+  .second-work-title {
+    font-size: 1.2rem;
+  }
+  .second-work-title h3 {
+    font-size: 1.3rem;
+  }
+  .second-work-text {
+    letter-spacing: 0.07rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
 }
 </style>

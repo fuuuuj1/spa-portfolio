@@ -129,28 +129,14 @@ export default {
     height: 100vh;
   }
   #history h1 {
-  text-align: left;
   font-size: 1.8rem;
-  color: #072142;
-  letter-spacing: 0.12em;
-  font-family: "futura_m";
-  margin-right: 3.2rem;
-  padding-top: 1rem;
   margin-bottom: 1vh;
 }
 .first-work-title {
-  text-align: left;
   font-size: 1.2rem;
-  letter-spacing: 0.15em;
-  font-weight: bold;
-  margin-bottom: 1.3rem;
 }
 .first-work-title h3 {
   font-size: 1.3rem;
-  letter-spacing: 0.2em;
-  font-weight: bold;
-  margin-bottom: 0.4rem;
-  text-align: left;
 }
 .first-work-text {
   text-align: left;
@@ -158,17 +144,7 @@ export default {
   line-height: 1.6;
   font-size: 0.9rem;
 }
-.first-work-image {
-  box-shadow: 0 0 15px rgba(0,0,0,.3);
-}
 .work-about {
-  justify-content: center;
-  vertical-align: middle;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  line-height: 2;
-  color: #828C96;
   font-size: 0.9rem;
 }
 }
