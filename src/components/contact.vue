@@ -23,14 +23,16 @@
 
     <v-row class="contact-link">
         <v-col cols="4">
-          <v-btn
-          icon
-          href="https://twitter.com/fuuuucham1103">
-          <v-icon
-          size="80"
-          color="twitter"
-          >mdi-twitter</v-icon>
-          </v-btn>
+          <div class="icon-position">
+            <v-btn
+            icon
+            href="https://twitter.com/fuuuucham1103">
+              <v-icon
+              size="80"
+              color="twitter"
+              >mdi-twitter</v-icon>
+            </v-btn>
+          </div>
         </v-col>
 
         <v-col cols="8">
@@ -62,7 +64,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 #contact {
   width: 100%;
   height: 90vh;
@@ -101,28 +103,8 @@ export default {
     top: 15%;
     right: 0%;
   width: 65%;
-  height: 100%;
   z-index: 1;
-}
-.contact-bg::before,
-.contact-bg::after {
-  position: absolute;
-  bottom: 10px;
-  z-index: -1;
-  content: '';
-  width: 50%;
-  height: 50%;
-  box-shadow: 0 10px 15px rgba(0,0,0,.5);
-}
-.contact-bg::before {
-  left: 10px;
-  -webkit-transform: rotate(-4deg);
-  transform: rotate(-4deg);
-}
-.contact-bg::after {
-  right: 10px;
-  -webkit-transform: rotate(4deg);
-  transform: rotate(4deg);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .contact-title {
   position: absolute;
@@ -154,5 +136,39 @@ export default {
   font-size: 1.4rem;
   text-decoration: none;
   color: skyblue;
+}
+@media screen and (max-width:720px){
+  #contact {
+    height:90vh;
+  }
+  #contact h1 {
+    font-size: 2.3rem;
+    margin-bottom:1vh;
+  }
+  .contact-view {
+    height: 250px;
+    margin-bottom: 7vh;
+  }
+  .contact-title {
+    position:absolute;
+    left: 8%;
+    top: 80px;
+  }
+  .contact-bg {
+    position: relative;
+    width: auto;
+  }
+  .contact-text {
+    margin-top: 2vh;
+  }
+  .contact-text span {
+    font-size: 0.9rem;
+  }
+  .contact-link {
+    line-height: 140px;
+  }
+  .icon-position a {
+    vertical-align: middle;
+  }
 }
 </style>
