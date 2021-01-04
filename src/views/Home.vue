@@ -19,7 +19,13 @@
       <p>私について詳しくはこちらから</p>
     </div>
 
+    <div class="hide_mobile">
     <next-button :next-url="nextUrl" />
+    </div>
+
+    <div class="btn_content hide_pc">
+      <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+    </div>
 
   </div>
 </template>
@@ -83,25 +89,35 @@ export default {
   right: 7%;
   bottom: 12%;
 }
+.btn_content{
+  /* position: relative; */
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+.hide_pc {
+  display:none
+}
 /* ---------------------------------------------------- */
 /* モバイル対応 */
 @media screen and (max-width:720px) {
 .home {
   position: relative;
-  height: 90vh;
+  height: 80vh;
 }
 .home .top-visual {
   width: 70%;
   height: 70vh;
   position: absolute;
-    top: 5%;
+    top: 10%;
     left: 15%;
 }
 
 .declaration {
   position: absolute;
   left: 13%;
-  top: 240px;
+  top: 38vh;
   text-align: left;
   font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   color: black;
@@ -128,6 +144,15 @@ export default {
   right: 7%;
   bottom: 12%;
 }
+.hide_mobile {
+    display:none
+  }
+  .hide_pc {
+    display:block;
+    position: absolute;
+    right: 5%;
+    bottom: -1%;
+  }
 }
 
 
