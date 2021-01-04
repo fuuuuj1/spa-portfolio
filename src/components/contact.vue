@@ -89,7 +89,7 @@ export default {
     -2px  0px 4px #072142,
     0px  -2px 4px #072142;
   position: relative;
-  z-index: 20;
+  z-index: 2;
 }
 .contact-view {
   position: relative;

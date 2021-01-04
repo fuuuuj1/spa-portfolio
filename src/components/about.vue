@@ -44,10 +44,6 @@
 
     </div>
 
-
-      <!-- ランダムに画像を配置するfanctionの実装 画像は6枚ほど？ toolchipの設定 -->
-    <!-- <image-view/> -->
-
   </div>
 </template>
 

@@ -114,12 +114,15 @@
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items>
-        <v-btn text to="/">Home</v-btn>
-        <v-btn text to="/about">About</v-btn>
-        <v-btn text to="/works">Works</v-btn>
-        <v-btn text to="/contact">Contact</v-btn>
-      </v-toolbar-items>
+      <div class="hide_mobile">
+        <v-toolbar-items>
+          <v-btn text to="/">Home</v-btn>
+          <v-btn text to="/about">About</v-btn>
+          <v-btn text to="/works">Works</v-btn>
+          <v-btn text to="/contact">Contact</v-btn>
+        </v-toolbar-items>
+      </div>
+
     </v-app-bar>
     <!-- ナビバー終了 -->
 
@@ -230,4 +233,12 @@ a {
     font-weight: bold;
     color: #2c3e50;
   }
+.hide_mobile {
+  height: 100% !important;
+}
+@media screen and (max-width:720px){
+  .hide_mobile {
+    display: none;
+  }
+}
 </style>
