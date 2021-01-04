@@ -32,8 +32,15 @@
       </v-row>
       </v-container>
 
-      <back-button :back-url="backUrl" />
-      <next-button :next-url="nextUrl" />
+      <div class="hide_mobile">
+        <back-button :back-url="backUrl" />
+        <next-button :next-url="nextUrl" />
+      </div>
+
+      <div class="btn_content hide_pc">
+        <back-button :back-url="backUrl" class="workhistory_btn"/>
+        <next-button :next-url="nextUrl" class="workhistory_btn workhistory_btn_next"/>
+      </div>
 
     </div>
 
@@ -63,7 +70,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 #profile {
   height: 90vh;
   width: 100%;
@@ -104,8 +111,21 @@ export default {
 .profile-photo {
   box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
 }
+.btn_content{
+  position: relative;
+  height: 8vh;
+}
+.btn_content a {
+  position:absolute;
+}
+.hide_pc {
+  display:none
+}
 /* ---------------------------- */
 @media screen and (max-width:720px){
+  #profile {
+    height: 80vh;
+  }
   #profile h1 {
   text-align: left;
   font-size: 1.8rem;
@@ -141,5 +161,12 @@ export default {
 .profile-photo {
   box-shadow: 0px 63px 124px -20px rgba(7, 33, 66, 0.5);
 }
+.hide_mobile {
+    display:none
+  }
+  .hide_pc {
+    display:block;
+    bottom: 4%;
+  }
 }
 </style>
